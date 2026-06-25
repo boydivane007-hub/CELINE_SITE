@@ -1,0 +1,74 @@
+const numeroWhatsApp = "2376XXXXXXXX"; // Remplace par le vrai numéro de Céline
+
+const pages = {
+  resto: `
+    <section class="hero hero-resto">
+      <h2>Resto Chic CÉLINE</h2>
+      <p>Cuisine gastronomique & Ambiance 5 étoiles</p>
+      <a href="https://wa.me/${numeroWhatsApp}?text=Bonjour%20CÉLINE%2C%20je%20veux%20réserver%20une%20table" class="btn">Réserver une table</a>
+    </section>
+    <section class="menu">
+      <h3>Nos Signatures</h3>
+      <div class="card">
+        <h4>Filet de bœuf sauce poivre</h4>
+        <p>Accompagné de gratin dauphinois</p>
+        <span class="price">15.000 FCFA</span>
+      </div>
+      <div class="card">
+        <h4>Risotto aux fruits de mer</h4>
+        <p>Crevettes, moules, encornet</p>
+        <span class="price">12.000 FCFA</span>
+      </div>
+    </section>
+  `,
+
+  pizza: `
+    <section class="hero hero-pizza">
+      <h2>Pizzeria CÉLINE</h2>
+      <p>Pâte fermentée 48h - Cuite au feu de bois</p>
+      <a href="https://wa.me/${numeroWhatsApp}?text=Bonjour%20CÉLINE%2C%20je%20veux%20commander%20une%20pizza" class="btn btn-green">Commander sur WhatsApp</a>
+    </section>
+    <section class="menu">
+      <h3>Nos Pizzas</h3>
+      <div class="card">
+        <h4>Margherita</h4>
+        <p>Tomate, mozzarella, basilic</p>
+        <span class="price">6.500 FCFA</span>
+      </div>
+      <div class="card">
+        <h4>Céline Spéciale</h4>
+        <p>Chorizo, champignons, olives, 4 fromages</p>
+        <span class="price">8.500 FCFA</span>
+      </div>
+    </section>
+  `,
+
+  glace: `
+    <section class="hero hero-glace">
+      <h2>Glacier CÉLINE</h2>
+      <p>Glaces artisanales - Fruits frais du Cameroun</p>
+      <a href="https://wa.me/${numeroWhatsApp}?text=Bonjour%20CÉLINE%2C%20je%20veux%20commander%20une%20coupe%20glacée" class="btn">Voir les parfums</a>
+    </section>
+    <section class="menu">
+      <h3>Coupes Signature</h3>
+      <div class="card">
+        <h4>Céline Gourmande</h4>
+        <p>Vanille, caramel beurre salé, noix de pécan</p>
+        <span class="price">3.500 FCFA</span>
+      </div>
+      <div class="card">
+        <h4>Choco Lover</h4>
+        <p>Chocolat belge, chantilly, copeaux</p>
+        <span class="price">4.000 FCFA</span>
+      </div>
+    </section>
+  `
+};
+
+function showPage(page) {
+  document.getElementById('content').innerHTML = pages[page];
+  window.scrollTo(0, 0);
+}
+
+// Page par défaut
+showPage('resto');
